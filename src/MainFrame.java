@@ -56,16 +56,16 @@ public class MainFrame extends JFrame implements ActionListener{        //robie 
         button.setEnabled(false);
         int q = checkWinner(PLAYER.O);      //ktory gracz wygrywa
         if (q == 1) {
-            JOptionPane.showMessageDialog(null, "Wygral gracz O (kolko)");
+            JOptionPane.showMessageDialog(null, "Wygral gracz O (Kółko)");
             System.exit(0);
         } else {
             q = checkWinner(PLAYER.X);
             if (q == 1) {
-                JOptionPane.showMessageDialog(null, "Wygral gracz X(krzyzy)");
+                JOptionPane.showMessageDialog(null, "Wygral gracz X(Krzyżyk)");
                 System.exit(0);
             }
             if (q == 2) {
-                JOptionPane.showMessageDialog(null, "Wygral gracz X(krzyzyk)");
+                JOptionPane.showMessageDialog(null, "Wygral gracz X(Krzyżyk)");
                 System.exit(0);
             }
         }
