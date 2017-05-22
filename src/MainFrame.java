@@ -56,7 +56,7 @@ public class MainFrame extends JFrame implements ActionListener{            //ob
         button.setEnabled(false);           //okienko z komunikatem i okey'ka
         int q = checkWinner(PLAYER.O);      //ktory gracz wygrywa
         if (q == 1) {           //wygrywa kolko o
-            JOptionPane.showMessageDialog(null, "Wygrał gracz Kółko (O).");     //pokazuje wiadomosc
+            JOptionPane.showMessageDialog(null, "Wygrał gracz Kółko(O).");     //pokazuje wiadomosc
             System.exit(0);
         } else {
             q = checkWinner(PLAYER.X);
