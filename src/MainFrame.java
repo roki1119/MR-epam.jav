@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class MainFrame extends JFrame implements ActionListener{        //robie ActionListenera do nasluchiwania
+public class MainFrame extends JFrame implements ActionListener{
 
     enum PLAYER{O, X}
 
@@ -56,16 +56,16 @@ public class MainFrame extends JFrame implements ActionListener{        //robie 
         button.setEnabled(false);
         int q = checkWinner(PLAYER.O);      //ktory gracz wygrywa
         if (q == 1) {
-            JOptionPane.showMessageDialog(null, "Wygral gracz O (Kółko)");
+            JOptionPane.showMessageDialog(null, "Wygral gracz Kółko (O)");
             System.exit(0);
         } else {
             q = checkWinner(PLAYER.X);
             if (q == 1) {
-                JOptionPane.showMessageDialog(null, "Wygral gracz X(Krzyżyk)");
+                JOptionPane.showMessageDialog(null, "Wygral gracz Krzyżyk (X)");
                 System.exit(0);
             }
             if (q == 2) {
-                JOptionPane.showMessageDialog(null, "Wygral gracz X(Krzyżyk)");
+                JOptionPane.showMessageDialog(null, "Wygral gracz Krzyżyk (X)");
                 System.exit(0);
             }
         }
