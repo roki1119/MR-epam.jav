@@ -56,16 +56,16 @@ public class MainFrame extends JFrame implements ActionListener{
         button.setEnabled(false);
         int q = checkWinner(PLAYER.O);      //ktory gracz wygrywa
         if (q == 1) {
-            JOptionPane.showMessageDialog(null, "Wygral gracz Kółko (O)");
+            JOptionPane.showMessageDialog(null, "Wygrał gracz Kółko (O)");
             System.exit(0);
         } else {
             q = checkWinner(PLAYER.X);
             if (q == 1) {
-                JOptionPane.showMessageDialog(null, "Wygral gracz Krzyżyk (X)");
+                JOptionPane.showMessageDialog(null, "Wygrał gracz Krzyżyk (X)");
                 System.exit(0);
             }
             if (q == 2) {
-                JOptionPane.showMessageDialog(null, "Wygral gracz Krzyżyk (X)");
+                JOptionPane.showMessageDialog(null, "Wygrał gracz Krzyżyk (X)");
                 System.exit(0);
             }
         }
@@ -109,8 +109,6 @@ public class MainFrame extends JFrame implements ActionListener{
             } else {
                 return 0;
             }
-
-
         }
     }
 }
