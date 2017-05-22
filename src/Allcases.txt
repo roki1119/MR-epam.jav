@@ -1,0 +1,19 @@
+Wszystkie przypadki wygranej gracza x
+012345678
+
+option1_1
+x--x--x-- //vertically
+-x--x--x-
+--x--x--x
+
+option_2
+
+xxx------ //horizontally
+---xxx---
+------xxx
+
+option3
+x---x---x // diagonally
+--x-x-x--
+
+
