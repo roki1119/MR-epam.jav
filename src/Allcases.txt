@@ -1,5 +1,5 @@
 Wszystkie przypadki wygranej gracza x
-0 1 2 3 4 5 6 7 8
+0, 1, 2, 3, 4, 5, 6, 7, 8 ==> koniec, 9 pól
 
 option1_1
 x--x--x-- //vertically    trzeba bedzie dodac i+3 oraz i+6 do indeksu startowego
