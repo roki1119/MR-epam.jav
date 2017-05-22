@@ -105,7 +105,7 @@ public class MainFrame extends JFrame implements ActionListener{            //ob
             return 1;
         } else {
             if (turn == 10) {    //musi byc turn == 10, aby mozna bylo ''przeklikac'' wszystkie przyciski, bo gdy damy 9,
-                return 2;        //to okienko zostanie ostatni element, ktory moze byc znaczacy przy wygranej.
+                return 2;        //to okienko w okienku zostanie ostatni pusty element, ktory moze byc znaczacy przy wygranej.
             } else {
                 return 0;
             }
