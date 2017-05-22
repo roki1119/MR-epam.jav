@@ -6,18 +6,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class MainFrame extends JFrame implements ActionListener{
+public class MainFrame extends JFrame implements ActionListener{            //obsługuje zdarzenia
 
     enum PLAYER{O, X}
 
     private List<JButton> buttons;
     private Container container;
-    private final static int NUM_OF_BUTTONS = 9;
+    private final static int NUM_OF_BUTTONS = 9;        //tyle bedzie przyciskow (8 indeksów w liście)
     private String player;
-    private PLAYER currentPlayer = PLAYER.O;
+    private PLAYER currentPlayer = PLAYER.O;            //zaczyna grę gracz Kółko (O)
     private int turn = 1;
 
-    private void createButtons() {
+    private void createButtons() {                      //tworzę 9przycisków pętlą for 012345678
         for (int i = 0; i < NUM_OF_BUTTONS; i++) {
             JButton b = new JButton("");
             buttons.add(b);
@@ -40,7 +40,7 @@ public class MainFrame extends JFrame implements ActionListener{
 
     }
 
-    //ActionPerformed - nie wiem czy dobrze
+    //ActionPerformed - nie wiem czy dobrze, ale dziala
     @Override
     public void actionPerformed(ActionEvent event) {
         JButton button = (JButton) event.getSource();
@@ -53,19 +53,19 @@ public class MainFrame extends JFrame implements ActionListener{
         }
         turn++;
 
-        button.setEnabled(false);
+        button.setEnabled(false);           //okienko z komunikatem i okey'ka
         int q = checkWinner(PLAYER.O);      //ktory gracz wygrywa
-        if (q == 1) {
-            JOptionPane.showMessageDialog(null, "Wygrał gracz Kółko (O)");
+        if (q == 1) {           //wygrywa kolko o
+            JOptionPane.showMessageDialog(null, "Wygrał gracz Kółko (O).");     //pokazuje wiadomosc
             System.exit(0);
         } else {
             q = checkWinner(PLAYER.X);
-            if (q == 1) {
-                JOptionPane.showMessageDialog(null, "Wygrał gracz Krzyżyk (X)");
+            if (q == 1) {       //wygrywa krzyzyk x
+                JOptionPane.showMessageDialog(null, "Wygrał gracz Krzyżyk (X).");
                 System.exit(0);
             }
-            if (q == 2) {
-                JOptionPane.showMessageDialog(null, "Wygrał gracz Krzyżyk (X)");
+            if (q == 2) {       //remis
+                JOptionPane.showMessageDialog(null, "Remis - żaden gracz nie wygrał. \n Spróbuj ponownie.");
                 System.exit(0);
             }
         }

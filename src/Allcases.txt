@@ -2,18 +2,24 @@ Wszystkie przypadki wygranej gracza x
 012345678
 
 option1_1
-x--x--x-- //vertically
--x--x--x-
+x--x--x-- //vertically    trzeba bedzie dodac i+3 oraz i+6 do indeksu startowego
+-x--x--x-                   //razem 3 przypadki
 --x--x--x
 
 option_2
 
-xxx------ //horizontally
----xxx---
+xxx------ //horizontally    trzeba bedzie ustawic i*3 (bo stoja kolo siebie), potem i*3+1 oraz i*3+2
+---xxx---                      //razem 3 przypadki
 ------xxx
 
 option3
-x---x---x // diagonally
---x-x-x--
+x---x---x // diagonally        trzeba pokazac, o ktore indeksy nam chodzi
+--x-x-x--                    // w tym wypadku jedna diagonala   0,4,8 i druga 2,4,6;
+                            //razem 2 przypadki
+0--1--2
+-------
+3--4--5       < == macierz 3*3, potrzebne gridLayout, setminsize itd
+-------       <== calosc ma byc na 3 if'ach i 12 buttons'ach
+6--7--8
 
 
