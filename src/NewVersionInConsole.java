@@ -125,9 +125,6 @@ public class NewVersionInConsole {
         } else {
             return false;
         }
-
-        //  measurement++;
-        //    return false;
     }
 
 
