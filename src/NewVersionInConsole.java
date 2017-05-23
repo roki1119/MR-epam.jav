@@ -23,11 +23,11 @@ public class NewVersionInConsole {
 
     public String ticTacToeBackground() {
         System.out.println("________________\n");
-        System.out.println("| " + element[1] + "  | " + element[2] + "  | " + element[3] + "  |\n|    |    |    |");
+        System.out.println("| " + element[0] + "  | " + element[1] + "  | " + element[2] + "  |\n|    |    |    |");
         System.out.println("________________\n");
-        System.out.println("| " + element[4] + "  | " + element[5] + "  | " + element[6] + "  |\n|    |    |    |");
+        System.out.println("| " + element[3] + "  | " + element[4] + "  | " + element[5] + "  |\n|    |    |    |");
         System.out.println("________________\n");
-        System.out.println("| " + element[7] + "  | " + element[8] + "  | " + element[9] + "  |\n|    |    |    |");
+        System.out.println("| " + element[6] + "  | " + element[7] + "  | " + element[8] + "  |\n|    |    |    |");
         System.out.println("________________\n");
         return "ticTacToeBackground";
     }
@@ -35,23 +35,23 @@ public class NewVersionInConsole {
     public char checkWinnerOfTheGame() {
         char Winner = ' ';
 
+        if (element[0] == 'X' && element[3] == 'X' && element[6] == 'X') Winner = 'X';
         if (element[1] == 'X' && element[4] == 'X' && element[7] == 'X') Winner = 'X';
         if (element[2] == 'X' && element[5] == 'X' && element[8] == 'X') Winner = 'X';
-        if (element[3] == 'X' && element[6] == 'X' && element[9] == 'X') Winner = 'X';
-        if (element[1] == 'X' && element[2] == 'X' && element[3] == 'X') Winner = 'X';
-        if (element[4] == 'X' && element[5] == 'X' && element[6] == 'X') Winner = 'X';
-        if (element[7] == 'X' && element[8] == 'X' && element[9] == 'X') Winner = 'X';
-        if (element[1] == 'X' && element[5] == 'X' && element[9] == 'X') Winner = 'X';
-        if (element[3] == 'X' && element[5] == 'X' && element[7] == 'X') Winner = 'X';
+        if (element[0] == 'X' && element[1] == 'X' && element[2] == 'X') Winner = 'X';
+        if (element[3] == 'X' && element[4] == 'X' && element[5] == 'X') Winner = 'X';
+        if (element[6] == 'X' && element[7] == 'X' && element[8] == 'X') Winner = 'X';
+        if (element[0] == 'X' && element[4] == 'X' && element[8] == 'X') Winner = 'X';
+        if (element[2] == 'X' && element[4] == 'X' && element[6] == 'X') Winner = 'X';
 
+        if (element[0] == 'O' && element[3] == 'O' && element[6] == 'O') Winner = 'O';
         if (element[1] == 'O' && element[4] == 'O' && element[7] == 'O') Winner = 'O';
         if (element[2] == 'O' && element[5] == 'O' && element[8] == 'O') Winner = 'O';
-        if (element[3] == 'O' && element[6] == 'O' && element[9] == 'O') Winner = 'O';
-        if (element[1] == 'O' && element[2] == 'O' && element[3] == 'O') Winner = 'O';
-        if (element[4] == 'O' && element[5] == 'O' && element[6] == 'O') Winner = 'O';
-        if (element[7] == 'O' && element[8] == 'O' && element[9] == 'O') Winner = 'O';
-        if (element[1] == 'O' && element[5] == 'O' && element[9] == 'O') Winner = 'O';
-        if (element[3] == 'O' && element[5] == 'O' && element[7] == 'O') Winner = 'O';
+        if (element[0] == 'O' && element[1] == 'O' && element[2] == 'O') Winner = 'O';
+        if (element[3] == 'O' && element[4] == 'O' && element[5] == 'O') Winner = 'O';
+        if (element[6] == 'O' && element[7] == 'O' && element[8] == 'O') Winner = 'O';
+        if (element[0] == 'O' && element[4] == 'O' && element[8] == 'O') Winner = 'O';
+        if (element[2] == 'O' && element[4] == 'O' && element[6] == 'O') Winner = 'O';
 
         if (Winner == 'X') {
             System.out.println("Gracz Krzyżyk (X) wygrał grę.");
@@ -62,9 +62,9 @@ public class NewVersionInConsole {
             return Winner;
         }
 
-        for (int i = 1; i <= 9; i++) {
+        for (int i = 0; i <= 8; i++) {
             if (element[i] == 'X' || element[i] == 'O') {
-                if (i == 9) {
+                if (i == 8) {
                     char ex = ' ';
                     System.out.println("Remis, żaden gracz nie wygrał. Spróbuj zagrać ponownie.");
                     return ex;
@@ -83,7 +83,7 @@ public class NewVersionInConsole {
         int i;
         measurement = 0;
         player = 'X';
-        for (i = 1; i < 10; i++)
+        for (i = 0; i < 9; i++)
             element[i] = newElement[i];
         ticTacToeBackground();
 
