@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class NewVersionInConsole {
 
-    private char element[] = new char[10];
+    private char element[] = new char[9];
     private char player;
     private int measurement;
 
