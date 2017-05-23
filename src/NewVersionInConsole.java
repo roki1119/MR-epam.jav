@@ -12,7 +12,7 @@ public class NewVersionInConsole {
         String tmp;
         NewVersionInConsole function = new NewVersionInConsole();
         do {
-            function.play();
+            function.game();
             System.out.println("Jeśli chcesz zagrać ponownie, wpisz 'chce'");
             Scanner in = new Scanner(System.in);
             tmp = in.nextLine();
@@ -21,7 +21,7 @@ public class NewVersionInConsole {
     }
 
 
-    public String ticTacToeBoard() {
+    public String ticTacToeBackground() {
         System.out.println("________________\n");
         System.out.println("| " + element[1] + "  | " + element[2] + "  | " + element[3] + "  |\n|    |    |    |");
         System.out.println("________________\n");
@@ -29,7 +29,7 @@ public class NewVersionInConsole {
         System.out.println("________________\n");
         System.out.println("| " + element[7] + "  | " + element[8] + "  | " + element[9] + "  |\n|    |    |    |");
         System.out.println("________________\n");
-        return "ticTacToeBoard";
+        return "ticTacToeBackground";
     }
 
     public char checkWinnerOfTheGame() {
@@ -44,8 +44,6 @@ public class NewVersionInConsole {
         if (element[1] == 'X' && element[5] == 'X' && element[9] == 'X') Winner = 'X';
         if (element[3] == 'X' && element[5] == 'X' && element[7] == 'X') Winner = 'X';
 
-
-        // Check if O wins
         if (element[1] == 'O' && element[4] == 'O' && element[7] == 'O') Winner = 'O';
         if (element[2] == 'O' && element[5] == 'O' && element[8] == 'O') Winner = 'O';
         if (element[3] == 'O' && element[6] == 'O' && element[9] == 'O') Winner = 'O';
@@ -87,18 +85,17 @@ public class NewVersionInConsole {
         player = 'X';
         for (i = 1; i < 10; i++)
             element[i] = newElement[i];
-        ticTacToeBoard();
-
+        ticTacToeBackground();
 
     }
-    public void play() {
+    public void game() {
         int place;
         char empty = ' ';
 
         System.out.println("Grasz w grę kółko i krzyżyk.\nWygrywa ten, który pierwszy skreśli 3 wartości po wierszu, kolumnie lub diagonali.");
 
         do {
-            ticTacToeBoard();
+            ticTacToeBackground();
 
             System.out.println("Rozpocznij grę przyciskiem numerycznym");
 
@@ -111,7 +108,7 @@ public class NewVersionInConsole {
                 if (posTaken == false)
                     element[place] = getPlayer();
             }
-            ticTacToeBoard();
+            ticTacToeBackground();
             nextCaseOfPlayer();
         } while (checkWinnerOfTheGame() == empty);
 
