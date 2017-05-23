@@ -101,7 +101,6 @@ public class NewVersionInConsole {
 
             boolean posTaken = true;
             while (posTaken) {
-                // System.out.println( "position is taken, please enter a valid space");
                 Scanner in = new Scanner(System.in);
                 place = in.nextInt();
                 posTaken = busyPlace(place);
